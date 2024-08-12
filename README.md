@@ -1,9 +1,19 @@
 <div>
 <a href=""><img src="https://github.com/frozzel/React-Native-Hello-World/blob/83f9c8c88d8e4ef2ad83318a0ece6fc0dbe0a9f4/assets/images/ReactNativeHubSpot.001.png" align="center" height="" width="100%" ></a></div>
 
-# Hello React Native App
+# React Native Axios Example - HubSpot CRM Integration
 
-This [Expo](https://expo.dev) project is a basic example of connecting axios to an outside api (built in our uni-server). The app demonstrates basic get function to display Contact info fetched from our HubSpot CRM in a mobile application setting.
+This [Expo](https://expo.dev) project is a simple React Native application that demonstrates how to connect to an external API using Axios. The app is designed to fetch and display contact information from a HubSpot CRM, showcasing the basic functionality of an HTTP GET request in a mobile application environment.
+
+## Features
+- **Axios Integration:** Demonstrates how to use Axios to make API calls from a React Native application.
+- **GET Request:** Fetches contact information from our university's HubSpot CRM server.
+- **Contact Information Display:** The retrieved contact data is displayed within the mobile app's user interface.
+- **Simple & Clean Code:** Ideal for beginners looking to understand the basics of API integration in a mobile setting.
+
+## Usage
+This example serves as a foundational project for those looking to learn how to connect React Native applications to external APIs, particularly for fetching and displaying data.
+
 
 
 ## Welcome to your Expo app 👋
