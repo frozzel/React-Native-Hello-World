@@ -1,4 +1,14 @@
-# Welcome to your Expo app 👋
+# Hello React Native App
+
+This [Expo](https://expo.dev) project is a basic example of connecting axios to an outside api (built in our uni-server). The app demonstrates basic get function to display Contact info fetched from our HubSpot CRM in a mobile application setting.
+
+## Screen Shots
+
+![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2771.PNG)
+![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2770.PNG)
+![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2769.PNG)
+
+## Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
