@@ -1,12 +1,10 @@
+<div>
+<a href=""><img src="https://github.com/frozzel/React-Native-Hello-World/blob/83f9c8c88d8e4ef2ad83318a0ece6fc0dbe0a9f4/assets/images/ReactNativeHubSpot.001.png" align="center" height="" width="100%" ></a></div>
+
 # Hello React Native App
 
 This [Expo](https://expo.dev) project is a basic example of connecting axios to an outside api (built in our uni-server). The app demonstrates basic get function to display Contact info fetched from our HubSpot CRM in a mobile application setting.
 
-## Screen Shots
-
-![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2771.PNG)
-![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2770.PNG)
-![Screen Shots](https://github.com/frozzel/React-Native-Hello-World/blob/5b752290b56a84d442c146b45f2610518f5b7ea3/assets/images/IMG_2769.PNG)
 
 ## Welcome to your Expo app 👋
 
