@@ -28,6 +28,10 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+      // "expo-contacts",
+      //   {
+      //     "contactsPermission": "Allow $(PRODUCT_NAME) to access your contacts."
+      //   },
       "expo-router"
     ],
     "experiments": {

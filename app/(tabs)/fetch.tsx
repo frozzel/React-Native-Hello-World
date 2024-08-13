@@ -31,7 +31,7 @@ export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{light: '#4c768d', dark: '#1c2c4c' }}
-      headerImage={<Ionicons size={310} name="people" style={styles.headerImage} />}>
+      headerImage={<Ionicons size={310} name="cloud-outline" style={styles.headerImage} />}>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Api Connect</ThemedText>
       </ThemedView>
