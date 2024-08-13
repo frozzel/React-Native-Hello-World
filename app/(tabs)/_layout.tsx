@@ -32,7 +32,7 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="settings"
         options={{
           title: 'Settings',
@@ -40,9 +40,18 @@ export default function TabLayout() {
             <TabBarIcon name={focused ? 'settings' : 'settings-outline'} color={color} />
           ),
         }}
-      />
+      /> */}
       <Tabs.Screen
         name="fetch"
+        options={{
+          title: 'HubSpot',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'cloud' : 'cloud-outline'} color={color} />
+          ),
+        }}
+      />
+            <Tabs.Screen
+        name="contacts"
         options={{
           title: 'Contacts',
           tabBarIcon: ({ color, focused }) => (
@@ -51,5 +60,6 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+    
   );
 }
