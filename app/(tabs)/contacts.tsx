@@ -1,19 +1,45 @@
 import React, {useState, useEffect } from 'react';
-import { StyleSheet, View, Text, FlatList} from 'react-native';
+import { Platform, StyleSheet, View, Text, FlatList} from 'react-native';
 import * as Contacts from 'expo-contacts';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import * as Location from 'expo-location';
+
 
 export default function App() {
     const [contacts, setContacts] = useState([]);
+    const [location, setLocation] = useState(null);
+    const [errorMsg, setErrorMsg] = useState(null);
+
+    useEffect(() => {
+      (async () => {
+        
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          setErrorMsg('Permission to access location was denied');
+          return;
+        }
+  
+        let location = await Location.getCurrentPositionAsync({});
+        setLocation(location);
+      })();
+    }, []);
+  
+    let text = 'Waiting..';
+    if (errorMsg) {
+      text = errorMsg;
+    } else if (location) {
+      text = JSON.stringify(location);
+    }
+  
     useEffect(() => {
         (async () => {
         const { status } = await Contacts.requestPermissionsAsync();
         if (status === 'granted') {
             const { data } = await Contacts.getContactsAsync({
-            fields: [Contacts.Fields.PhoneNumbers],
+            fields: [Contacts.Fields.PhoneNumbers, Contacts.Fields.Emails],
             });
             // console.log( data[0].phoneNumbers[0].digits );
             setContacts(data);
@@ -28,9 +54,18 @@ export default function App() {
 
     
     const renderContactItem = ({ item }) => (
+      // console.log(item),
         <View style={styles.contactItem}>
             <ThemedText style={styles.contactName}>{item.name}</ThemedText>
-            <Text style={styles.contactEmail}>{item.id}</Text>
+            {item.phoneNumbers ?  (<Text style={styles.contactEmail}>Phone: {item.phoneNumbers[0].digits}</Text>
+          ) : (
+          <Text style={styles.contactEmail}>No Phone Number</Text>
+          )}
+          {item.emails ?  (<Text style={styles.contactEmail}>Email: {item.emails[0].email}</Text>
+          ) : (
+          <Text style={styles.contactEmail}>No Email</Text>
+          )}
+            {/* <Text style={styles.contactEmail}>{item.phoneNumbers[0].digits}</Text> */}
             {/* <Text style={styles.contactEmail}>test@dataSecure.com</Text> */}
     
         </View>
@@ -44,6 +79,10 @@ export default function App() {
       </ThemedView>
       <ThemedText>Connect to Native Contacts For iOS</ThemedText>
       <ThemedText></ThemedText>
+
+      <ThemedView style={styles.titleContainer}>
+        <ThemedText type="text">{text}</ThemedText>
+      </ThemedView>
 
       <FlatList
         data={contacts}
@@ -84,5 +123,16 @@ const styles = StyleSheet.create({
     contactEmail: {
       fontSize: 14,
       color: '#555',
+    },  
+    container: {
+      // flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 20,
     },
+    paragraph: {
+      fontSize: 18,
+      textAlign: 'center',
+    },
+  
   });
