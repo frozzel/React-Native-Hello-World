@@ -1,39 +1,16 @@
 import React, {useState, useEffect } from 'react';
-import { Platform, StyleSheet, View, Text, FlatList} from 'react-native';
+import { StyleSheet, View, Text, FlatList} from 'react-native';
 import * as Contacts from 'expo-contacts';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import * as Location from 'expo-location';
+
 
 
 export default function App() {
     const [contacts, setContacts] = useState([]);
-    const [location, setLocation] = useState(null);
-    const [errorMsg, setErrorMsg] = useState(null);
 
-    useEffect(() => {
-      (async () => {
-        
-        let { status } = await Location.requestForegroundPermissionsAsync();
-        if (status !== 'granted') {
-          setErrorMsg('Permission to access location was denied');
-          return;
-        }
-  
-        let location = await Location.getCurrentPositionAsync({});
-        setLocation(location);
-      })();
-    }, []);
-  
-    let text = 'Waiting..';
-    if (errorMsg) {
-      text = errorMsg;
-    } else if (location) {
-      text = JSON.stringify(location);
-    }
-  
     useEffect(() => {
         (async () => {
         const { status } = await Contacts.requestPermissionsAsync();
@@ -79,10 +56,6 @@ export default function App() {
       </ThemedView>
       <ThemedText>Connect to Native Contacts For iOS</ThemedText>
       <ThemedText></ThemedText>
-
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="text">{text}</ThemedText>
-      </ThemedView>
 
       <FlatList
         data={contacts}
