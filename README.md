@@ -1,5 +1,5 @@
 <div>
-<a href=""><img src="https://github.com/frozzel/React-Native-Hello-World/blob/83f9c8c88d8e4ef2ad83318a0ece6fc0dbe0a9f4/assets/images/ReactNativeHubSpot.001.png" align="center" height="" width="100%" ></a></div>
+<a href=""><img src="https://github.com/frozzel/React-Native-Hello-World/blob/ecdcffcd6a2c9f582b7aacb180818943d2152962/assets/images/iphonecover.png" align="center" height="" width="100%" ></a></div>
 
 # React Native Expo (Axios, Contacts, Maps, Location Services)
 
