@@ -19,12 +19,11 @@ export default function TabTwoScreen() {
     useEffect( () => {
         fetchContacts()
       }, []) 
-  
     const renderContactItem = ({ item }) => (
     <View style={styles.contactItem}>
         <ThemedText style={styles.contactName}>{item.properties.firstname} {item.properties.lastname}</ThemedText>
-        {/* <Text style={styles.contactEmail}>{item.properties.email}</Text> */}
-        <Text style={styles.contactEmail}>test@dataSecure.com</Text>
+        <Text style={styles.contactEmail}>{item.properties.email}</Text>
+        {/* <Text style={styles.contactEmail}>test@dataSecure.com</Text> */}
 
     </View>
     );
