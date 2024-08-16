@@ -1,18 +1,20 @@
 <div>
 <a href=""><img src="https://github.com/frozzel/React-Native-Hello-World/blob/83f9c8c88d8e4ef2ad83318a0ece6fc0dbe0a9f4/assets/images/ReactNativeHubSpot.001.png" align="center" height="" width="100%" ></a></div>
 
-# React Native Axios Example - HubSpot CRM Integration
+# React Native Expo (Axios, Contacts, Maps, Location Services)
 
-This [Expo](https://expo.dev) project is a simple React Native application that demonstrates how to connect to an external API using Axios. The app is designed to fetch and display contact information from a HubSpot CRM, showcasing the basic functionality of an HTTP GET request in a mobile application environment.
+This [Expo](https://expo.dev) project is a simple React Native application that demonstrates how to connect to an external API using Axios. The app is designed to fetch and display contact information from a HubSpot CRM, showcasing the basic functionality of an HTTP GET request in a mobile application environment. Additionally, it incorporates functionalities for accessing device contacts and current location tracking using Expo modules.
 
 ## Features
 - **Axios Integration:** Demonstrates how to use Axios to make API calls from a React Native application.
 - **GET Request:** Fetches contact information from our university's HubSpot CRM server.
 - **Contact Information Display:** The retrieved contact data is displayed within the mobile app's user interface.
-- **Simple & Clean Code:** Ideal for beginners looking to understand the basics of API integration in a mobile setting.
+- **Expo Contacts Module:** Access and manage the device's contacts on iOS, allowing you to retrieve detailed contact information or perform actions like creating, updating, or deleting contacts.
+- **Expo Location Module:** Integrates maps and detects the user's current location, enabling real-time location tracking with easy access to geographic coordinates.
+- **Simple & Clean Code:** Ideal for beginners looking to understand the basics of API integration and device capabilities in a mobile setting.
 
 ## Usage
-This example serves as a foundational project for those looking to learn how to connect React Native applications to external APIs, particularly for fetching and displaying data.
+This example serves as a foundational project for those looking to learn how to connect React Native applications to external APIs, particularly for fetching and displaying data. Additionally, it provides insights into utilizing Expo modules to interact with device contacts, current location, and native maps enhancing the functionality of mobile applications.
 
 
 
